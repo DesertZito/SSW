@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drafty - Inicio Sesión</title>
+    <title>Drafty - Crear Equipo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="competiciones.html">Competiciones</a></li>
+                <li><a href="competiciones.html" style="font-weight: bold; text-decoration: underline;">Competiciones</a></li>
                 <li><a href="mis_competiciones.html">Mis Competiciones</a></li>
                 <li><a href="crear_competicion.html" class="btn-crear">+ Crear Competición</a></li>
                 <li>
@@ -29,21 +29,17 @@
 
     <main>
         <div class="form-container">
-            <h2>INICIAR SESIÓN</h2>
+            <h2>Creando Equipo</h2>
             <form action="#" method="POST">
+                
                 <div class="input-group">
-                    <label for="username">Usuario</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="nombre_equipo">Nombre</label>
+                    <input type="text" id="nombre_equipo" name="nombre_equipo" required>
                 </div>
-                <div class="input-group">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn-submit">Entrar</button>
+
+                <button type="submit" class="btn-submit">Crear</button>
+                
             </form>
-            <div class="form-footer">
-                <a href="registro.html">¿No tienes cuenta? Regístrate</a>
-            </div>
         </div>
     </main>
 

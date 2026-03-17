@@ -1,0 +1,429 @@
+/* styles.css */
+:root {
+    --bg-color: #1a1a1a;
+    --header-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --accent-color: #4CAF50; /* Color verde de ejemplo para botones, podéis cambiarlo */
+    --border-color: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER COMÚN --- */
+header {
+    background-color: var(--header-bg);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-box {
+    border: none;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 68px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.btn-crear {
+    border: 1px solid var(--text-color);
+    padding: 8px 15px;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.btn-crear:hover {
+    background-color: var(--text-color);
+    color: var(--header-bg);
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- ESTILOS COMPARTIDOS PARA FORMULARIOS --- */
+.form-container {
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--header-bg);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+.btn-submit {
+    display: block;
+    width: 120px;
+    margin: 30px auto 15px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.form-footer a {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* --- LAYOUT A DOS COLUMNAS (Sidebar + Contenido) --- */
+.layout-sidebar-main {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch; /* Para que sidebar y contenido midan lo mismo de alto */
+    padding: 20px;
+}
+
+/* --- BARRA LATERAL (Filtros y Búsqueda) --- */
+.sidebar {
+    flex: 0 0 250px; /* Ancho fijo de 250px */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-bar {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    background-color: var(--header-bg);
+    text-align: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.filters-box {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--header-bg);
+    flex: 1; /* Ocupa el resto del espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* --- ÁREA DE CONTENIDO (Listas de competiciones) --- */
+.content-area {
+    flex: 1; /* Ocupa todo el espacio restante a la derecha */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.panel {
+    border: 1px solid var(--border-color);
+    background-color: var(--header-bg);
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Para que ambas cajas se repartan el alto por igual */
+}
+
+.panel-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.panel-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.competition-list {
+    list-style: none;
+}
+
+.competition-list a,
+.competition-list a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.competition-list a:hover,
+.competition-list a:active {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.competition-list li {
+    padding: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.competition-list li:hover {
+    color: var(--accent-color);
+}
+
+/* --- ESTILOS ESPECÍFICOS: COMPETICIÓN SELECCIONADA --- */
+
+/* Barra lateral de acciones (Izquierda) */
+.competition-info {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--header-bg);
+    flex: 1; /* Para que ocupe todo el alto disponible si es necesario */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.competition-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.competition-info p {
+    font-size: 16px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.btn-sidebar {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-sidebar:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.btn-sidebar small {
+    display: block;
+    font-size: 10px;
+    margin-top: 4px;
+    opacity: 0.7;
+}
+
+/* Tablas de datos (Derecha) */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Alinear a la izquierda el nombre del equipo en la tabla */
+.data-table td.text-left,
+.data-table th.text-left {
+    text-align: left;
+}
+
+/* --- ESTILOS ESPECÍFICOS: MENÚ INICIO --- */
+
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.banner-panel {
+    background-color: var(--header-bg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px; /* Altura grande para que destaque */
+    text-align: center;
+    position: relative;
+}
+
+.banner-panel h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.banner-panel p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Flechas del carrusel de noticias */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+.carousel-arrow:hover {
+    color: var(--accent-color);
+}
+
+.carousel-arrow.left {
+    left: 20px;
+}
+
+.carousel-arrow.right {
+    right: 20px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 4px;
+}

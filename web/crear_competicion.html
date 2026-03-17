@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafty - Crear Competición</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.svg" alt="Logo Drafty" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="competiciones.html" style="font-weight: bold; text-decoration: underline;">Competiciones</a></li>
+                <li><a href="mis_competiciones.html">Mis Competiciones</a></li>
+                <li><a href="crear_competicion.html" class="btn-crear">+ Crear Competición</a></li>
+                <li>
+                    <a href="#" class="profile-icon" aria-label="Perfil">
+                        <img src="perfil.svg" alt="Perfil" class="profile-img">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Creando Competición</h2>
+            <form action="#" method="POST">
+                
+                <div class="input-group">
+                    <label for="nombre_competicion">Nombre</label>
+                    <input type="text" id="nombre_competicion" name="nombre_competicion" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="deporte">Deporte</label>
+                    <select id="deporte" name="deporte" required>
+                        <option value="" disabled selected>Selecciona un deporte</option>
+                        <option value="futbol" style="color: black;">Fútbol</option>
+                        <option value="baloncesto" style="color: black;">Baloncesto</option>
+                        <option value="tenis" style="color: black;">Tenis</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="participantes">Participantes</label>
+                    <input type="text" id="participantes" name="participantes">
+                </div>
+
+                <div class="input-group">
+                    <label for="fecha_inicio">Fecha Inicio</label>
+                    <input type="date" id="fecha_inicio" name="fecha_inicio">
+                </div>
+
+                <div class="input-group">
+                    <label for="num_max_equipos">Num. max. equipos</label>
+                    <input type="number" id="num_max_equipos" name="num_max_equipos" min="2">
+                </div>
+
+                <button type="submit" class="btn-submit">Crear</button>
+                
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

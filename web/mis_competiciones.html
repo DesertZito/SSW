@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafty - Mis Competiciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.svg" alt="Logo Drafty" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="competiciones.html">Competiciones</a></li>
+                <li><a href="mis_competiciones.html" style="font-weight: bold; text-decoration: underline;">Mis Competiciones</a></li>
+                <li><button class="btn-crear">+ Crear Competición</button></li>
+                <li>
+                    <a href="#" class="profile-icon" aria-label="Perfil">
+                        <img src="perfil.svg" alt="Perfil" class="profile-img">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="align-items: flex-start;"> <div class="layout-sidebar-main">
+            
+            <aside class="sidebar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Barra de Búsqueda">
+                </div>
+                <div class="filters-box">
+                    FILTROS<br>DE<br>BÚSQUEDA
+                </div>
+            </aside>
+
+            <section class="content-area">
+                
+                <div class="panel">
+                    <div class="panel-header">COMPETICIONES DONDE PARTICIPAS</div>
+                    <div class="panel-content">
+                        <ul class="competition-list">
+                            <li><a href="competicion_seleccionada.html">Competición 1 - Fútbol</a></li>
+                            <li>Competición 2 - Baloncesto</li>
+                            <li>Competición 3</li>
+                            </ul>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">COMPETICIONES QUE SIGUES</div>
+                    <div class="panel-content">
+                        <ul class="competition-list">
+                            <li>Competición A</li>
+                            <li>Competición B</li>
+                            <li>Competición C</li>
+                            </ul>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
