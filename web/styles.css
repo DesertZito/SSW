@@ -427,3 +427,31 @@ main {
     color: var(--text-color);
     border-radius: 4px;
 }
+
+/* --- ESTILOS PARA EL PERFIL DE USUARIO --- */
+
+.cabecera-perfil {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.foto-perfil-grande {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--header-bg); /* Por si no carga la imagen */
+    border: 2px solid var(--text-color);
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.enlace-cambiar-foto {
+    display: block;
+    color: var(--accent-color); /* Usa el verde que definiste */
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.enlace-cambiar-foto:hover {
+    text-decoration: underline;
+}

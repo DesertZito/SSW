@@ -1,15 +1,84 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafty - Crear Partido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.svg" alt="Logo Drafty" class="img-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="competiciones.html">Competiciones</a></li>
+                <li><a href="mis_competiciones.html">Mis Competiciones</a></li>
+                <li><a href="crear_competicion.html" class="btn-crear">+ Crear Competición</a></li>
+                <li>
+                    <a href="#" class="icono-perfil" aria-label="Perfil">
+                        <img src="perfil.svg" alt="Perfil" class="img-perfil">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="iniciar-sesion">
+            <h2>CREAR PARTIDO</h2>
+            
+            <form action="#" method="POST">
+                
+                <div class="grupo-input">
+                    <label for="equipo_local">Equipo Local</label>
+                    <select id="equipo_local"  required>
+                        <option value="" disabled>Selecciona local...</option>
+                        <option value="Equipo1" selected style="color: black;">Equipo 1</option>
+                        <option value="Equipo2" style="color: black;">Equipo 2</option>
+                        <option value="Equipo3" style="color: black;">Equipo 3</option>
+                        <option value="Equipo4" style="color: black;">Equipo 4</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="equipo_visitante">Equipo Visitante</label>
+                    <select id="equipo_visitante"  required>
+                        <option value="" disabled>Selecciona visitante...</option>
+                        <option value="Equipo1" style="color: black;">Equipo 1</option>
+                        <option value="Equipo2" selected style="color: black;">Equipo 2</option>
+                        <option value="Equipo3" style="color: black;">Equipo 3</option>
+                        <option value="Equipo4" style="color: black;">Equipo 4</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="fecha_partido">Fecha del encuentro</label>
+                    <input type="date" id="fecha_partido" name="fecha_partido"  required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="hora_partido">Hora</label>
+                    <input type="time" id="hora_partido" name="hora_partido"  required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="lugar_partido">Lugar / Pista</label>
+                    <input type="text" id="lugar_partido" name="lugar_partido"  required>
+                </div>
+
+                <button type="submit" class="btn-entrar">Crear Partido</button>
+                
+            </form>
+
+            <div class="debajo-formulario">
+                <a href="competicion_seleccionada.html">Cancelar y volver a la competición</a>
+            </div>
+        </div>
+    </main>
+
+</body>
 </html>

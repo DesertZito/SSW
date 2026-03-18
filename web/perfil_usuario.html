@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafty - Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.svg" alt="Logo Drafty" class="img-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="competiciones.html">Competiciones</a></li>
+                <li><a href="mis_competiciones.html">Mis Competiciones</a></li>
+                <li><a href="crear_competicion.html" class="btn-crear">+ Crear Competición</a></li>
+                <li>
+                    <a href="perfil_usuario.html" class="icono-perfil" aria-label="Perfil">
+                        <img src="perfil.svg" alt="Perfil" class="img-perfil">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="iniciar-sesion">
+            
+            <div class="cabecera-perfil">
+                <img src="perfil.svg" alt="Foto de perfil grande" class="foto-perfil-grande">
+                <a href="#" class="enlace-cambiar-foto">Cambiar foto perfil</a>
+            </div>
+            
+            <form action="#" method="POST">
+                
+                <div class="grupo-input">
+                    <label for="usuario_actual">Usuario</label>
+                    <input type="text" id="usuario_actual" name="usuario_actual" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="contrasena_actual">Contraseña</label>
+                    <input type="password" id="contrasena_actual" name="contrasena_actual"  required>
+                </div>
+
+                <button type="submit" class="btn-entrar">Guardar Cambios</button>
+                
+            </form>
+
+        </div>
+    </main>
+
+</body>
 </html>
