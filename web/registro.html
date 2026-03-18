@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drafty - Inicio Sesión</title>
+    <title>Drafty - Registro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,26 +26,33 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
         <div class="iniciar-sesion">
-            <h2>INICIAR SESIÓN</h2>
+            <h2>REGISTRASE  </h2>
             <form action="#" method="POST">
                 <div class="grupo-input">
-                    <label for="username">Usuario</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="nuevo_usuario">Usuario</label>
+                    <input type="text" id="nuevo_usuario" name="nuevo_usuario" placeholder="Ej: Samuel_SJ" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ej: samuel@uva.es" required>
                 </div>
                 <div class="grupo-input">
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="nueva_contrasena">Contraseña</label>
+                    <input type="password" id="nueva_contrasena" name="nueva_contrasena" placeholder="Mínimo 8 caracteres" required>
                 </div>
-                <button type="submit" class="btn-entrar">Entrar</button>
+
+
+
+                <button type="submit" class="btn-entrar">Registrar</button>
             </form>
             <div class="debajo-formulario">
-                <a href="registro.html">¿No tienes cuenta? Regístrate</a>
+                <a href="index.html">¿Ya tienes cuenta? Inicia Sesión</a>
             </div>
         </div>
     </main>
-
 </body>
 </html>
