@@ -40,7 +40,7 @@
                         <small>Enviar invitación por email</small>
                     </a>
                 
-                    <a href="#modal-eliminar" class="btn-sidebar" style="border-color: #ff4444; color: #ff4444;">
+                    <a href="#modal-eliminar-equipo" class="btn-sidebar" style="border-color: #ff4444; color: #ff4444;">
                         Disolver Equipo
                         <small>Esta acción es permanente</small>
                     </a>
@@ -130,6 +130,33 @@
                         Al añadirlo, recibirá una notificación en su panel de <a href="#">Mis Competiciones</a>.
                     </p>
                 </form>
+            </section>
+        </div>
+    </div>
+    
+    <div id="modal-eliminar-equipo" class="fondo-modal">
+        <div class="contenido-modal">
+            <section class="iniciar-sesion" style="border-color: #ff4444;">
+                <a href="#" class="cerrar-modal" aria-label="Cerrar">&times;</a>
+                
+                <h2 style="color: #ff4444;">¿Eliminar equipo?</h2>
+                
+                <div class="panel-content" style="text-align: center; margin-bottom: 20px;">
+                    <p>¿Estás seguro de que deseas borrar este equipo de la liga?</p>
+                    <p style="font-size: 12px; margin-top: 10px; opacity: 0.7;">
+                        Esta acción no se puede deshacer y se perderán todas las estadísticas.
+                    </p>
+                </div>
+
+                <div style="display: flex; gap: 15px; justify-content: center;">
+                    <button class="btn-entrar" style="border-color: #ff4444; color: #ff4444; margin: 0;">
+                        Eliminar
+                    </button>
+                    
+                    <a href="#" class="btn-entrar" style="text-decoration: none; text-align: center; margin: 0; line-height: 20px;">
+                        Cancelar
+                    </a>
+                </div>
             </section>
         </div>
     </div>
