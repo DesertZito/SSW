@@ -536,3 +536,33 @@ main {
 .layout-sidebar-main {
     align-items: flex-start; /* Evita que la sidebar se estire innecesariamente */
 }
+
+/* 1. Regla Global: Forzar que todos los enlaces mantengan el color de texto */
+a, 
+a:link, 
+a:visited, 
+a:hover, 
+a:active {
+    color: inherit; /* Hereda el color blanco definido en el body/contenedor */
+    text-decoration: none; /* Quita el subrayado por defecto si no lo quieres */
+}
+
+/* 2. Mantener el color en los botones de la sidebar y navegación */
+.btn-sidebar:visited,
+.nav-links a:visited,
+.competition-list a:visited {
+    color: var(--text-color) !important;
+}
+
+/* 3. Asegurar que el efecto Hover siga funcionando (esto va DESPUÉS de lo anterior) */
+nav a:hover,
+.competition-list li:hover,
+.competition-list a:hover,
+.enlace-cambiar-foto:hover {
+    color: var(--accent-color) !important;
+}
+
+/* 4. Específicamente para los enlaces de "Expulsar" o botones rojos */
+a[style*="color: #ff4444"]:visited {
+    color: #ff4444 !important;
+}
