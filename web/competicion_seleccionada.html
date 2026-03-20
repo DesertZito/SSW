@@ -36,11 +36,14 @@
                         <h3>Competición 1</h3>
                         <p>Fútbol</p>
                     </div>
-                    
-                    <button class="btn-sidebar">
+                    <a href="#modal-noticia" class="btn-sidebar">
+                        Crear Noticia
+                        <small>(solo si eres organizador)</small>
+                    </a>
+                    <a href="crear_partido.html" class="btn-sidebar">
                         Crear Partido
                         <small>(solo si eres organizador)</small>
-                    </button>
+                    </a>
                     <button class="btn-sidebar">
                         Editar Resultados
                         <small>(solo si eres organizador)</small>
@@ -152,6 +155,34 @@
             </section>
         </div>
     </main>
+    <div id="modal-noticia" class="fondo-modal">
+        <div class="contenido-modal iniciar-sesion">
+            <a href="#" class="cerrar-modal">&times;</a>
+            
+            <h2>CREAR NOTICIA</h2>
+            
+            <form action="#" method="POST">
+                
+                <div class="grupo-input">
+                    <label for="titulo_noticia">Título</label>
+                    <input type="text" id="titulo_noticia" name="titulo_noticia" placeholder="Ej: Cambio de horario en la final" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="desc_noticia">Descripción</label>
+                    <textarea id="desc_noticia" name="desc_noticia" rows="4" cols="65" placeholder="Escribe aquí los detalles de la noticia..." required></textarea>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="foto_noticia">Foto (Opcional)</label>
+                    <input type="file" id="foto_noticia" name="foto_noticia" accept="image/*" style="border: none; padding: 0;">
+                </div>
+
+                <button type="submit" class="btn-entrar">Publicar Noticia</button>
+                
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
