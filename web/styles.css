@@ -504,3 +504,35 @@ main {
 .cerrar-modal:hover {
     color: var(--accent-color);
 }
+
+/* Asegura que la sidebar de info de equipo tenga un estilo limpio */
+.competition-info {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--header-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Mejora visual para las filas de la tabla de integrantes */
+.data-table td {
+    vertical-align: middle;
+}
+
+/* Estilo para links de acción dentro de la tabla (como 'Expulsar') */
+.data-table a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.data-table a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste para el layout cuando la sidebar es muy corta */
+.layout-sidebar-main {
+    align-items: flex-start; /* Evita que la sidebar se estire innecesariamente */
+}

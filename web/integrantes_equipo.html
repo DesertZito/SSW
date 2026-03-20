@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drafty - Integrantes del Equipo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.svg" alt="Logo Drafty" class="img-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="competiciones.html">Competiciones</a></li>
+                <li><a href="mis_competiciones.html">Mis Competiciones</a></li>
+                <li><a href="crear_competicion.html" class="btn-crear">+ Crear Competición</a></li>
+                <li>
+                    <a href="perfil_usuario.html" class="icono-perfil" aria-label="Perfil">
+                        <img src="perfil.svg" alt="Perfil" class="img-perfil">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="align-items: flex-start;">
+        <div class="layout-sidebar-main">
+            
+            <aside class="sidebar">
+                <div class="competition-info">
+                    <h3>Equipo Titanes</h3>
+                    <p>ID: #4421</p>
+                    
+                    <a href="#modal-invitar" class="btn-sidebar">
+                        Añadir Integrante
+                        <small>Enviar invitación por email</small>
+                    </a>
+                
+                    <a href="#modal-eliminar" class="btn-sidebar" style="border-color: #ff4444; color: #ff4444;">
+                        Disolver Equipo
+                        <small>Esta acción es permanente</small>
+                    </a>
+                </div>
+            </aside>
+
+            <section class="content-area">
+                <div class="panel">
+                    <div class="panel-header">INTEGRANTES DEL EQUIPO</div>
+                    <div class="panel-content">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Nombre / Alias</th>
+                                    <th>Rol</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left">Carlos Santana (Capitán)</td>
+                                    <td>Administrador</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Lucía García</td>
+                                    <td>Jugador</td>
+                                    <td><a href="#" style="color: #ff4444; font-size: 12px;">Expulsar</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Marcos Ruiz</td>
+                                    <td>Jugador</td>
+                                    <td><a href="#" style="color: #ff4444; font-size: 12px;">Expulsar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="modal-invitar" class="fondo-modal">
+        <div class="contenido-modal">
+            <div class="iniciar-sesion">
+                <a href="#" class="cerrar-modal">&times;</a>
+                <h2>Invitar Integrante</h2>
+                <div class="grupo-input">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="usuario@ejemplo.com">
+                </div>
+                <button class="btn-entrar">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-añadir-participante" class="fondo-modal">
+        <div class="contenido-modal">
+            <section class="iniciar-sesion">
+                <a href="#" class="cerrar-modal" aria-label="Cerrar">&times;</a>
+                
+                <h2>Añadir Participante</h2>
+                
+                <form action="#">
+                    <div class="grupo-input">
+                        <label for="nombre-participante">Nombre del Participante / Equipo</label>
+                        <input type="text" id="nombre-participante" placeholder="Ej: Los Titanes FC" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="email-contacto">Correo de contacto (Opcional)</label>
+                        <input type="email" id="email-contacto" placeholder="usuario@ejemplo.com">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="rol-participante">Asignar Rol</label>
+                        <select id="rol-participante">
+                            <option value="jugador">Jugador Estándar</option>
+                            <option value="capitan">Capitán / Admin</option>
+                            <option value="invitado">Invitado Temporal</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-entrar">Añadir</button>
+                    
+                    <p class="debajo-formulario">
+                        Al añadirlo, recibirá una notificación en su panel de <a href="#">Mis Competiciones</a>.
+                    </p>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
